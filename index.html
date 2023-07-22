@@ -27,9 +27,13 @@
 
     <header>
         <div class="kiri">
-            <h1 id="type">
-                <img src="images/icon/icon_kopi.svg">
+            <h1>
+                Kopi Kuy<img src="images/icon/icon_kopi.svg">
             </h1>
+            <p>
+                Kopi Kuy merupakan sebuah startup kopi retail yang ingin menyajikan
+                high quality Coffee untuk para pelanggannya.
+            </p>
 
             <div class="olshop">
                 <img src="images/logo/logo_bukalapak.png" alt="">
@@ -180,20 +184,7 @@
     </footer>
 
     <script>
-        var string = "Kopi Kuy"; /* type your text here */
-        var array = string.split("");
-        var timer;
 
-        function frameLooper() {
-            if (array.length > 0) {
-                document.getElementById("type").innerHTML += array.shift();
-            } else {
-                clearTimeout(timer);
-            }
-            loopTimer = setTimeout('frameLooper()', 70); /* change 70 for speed */
-
-        }
-        frameLooper();
     </script>
 
 
