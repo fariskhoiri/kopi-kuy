@@ -79,73 +79,51 @@
                 </div>
             </div>
 
-            <div id="baris_produk" class="row row-cols-1 row-cols-sm-2 row-cols-md-3 row-cols-lg-4 text-center mt-5">
-                <div class="col mb-4">
-                    <div class="card">
-                        <img src="images/produk/product_capuchino.jpg" class="card-img-top" alt="...">
-                        <div class="card-body">
-                            <h5 class="card-title">Cappuccino</h5>
-                            <div class="row hargasize my-4">
-                                <div class="col">
-                                    120 Gram
-                                </div>
-                                <div class="col">
-                                    58.000
-                                </div>
-                            </div>
-                            <a href="#" class="btn btn-success w-100"><i class="bi bi-cart4"></i> Beli</a>
+            <!-- fotter-->
+            <footer class="riki-block footer-small py-4 bg-success">
+                <div class="container">
+                    <div class="row align-items-center">
+                        <div class="col-12 col-md-8">
+                            <ul class="nav justify-content-center justify-content-md-start">
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html#best-seller">Best Seller</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html#our-team">Our Team</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html#review">Review</a>
+                                </li>
+                                <li class="nav-item">
+                                    <a class="nav-link" href="index.html#contact-us">Contact Us</a>
+                                </li>
+                            </ul>
+                        </div>
+
+                        <div class="col-12 col-md-4 mt-4 mt-md-0 text-center text-md-right">
+                            &copy; 2023 Kopi Kuy &amp; Tim . All Rights Reserved
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
+            </footer>
 
-    <!-- fotter-->
-    <footer class="riki-block footer-small py-4 bg-success">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-12 col-md-8">
-                    <ul class="nav justify-content-center justify-content-md-start">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html#best-seller">Best Seller</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html#our-team">Our Team</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html#review">Review</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html#contact-us">Contact Us</a>
-                        </li>
-                    </ul>
-                </div>
+            <!-- Batas Akhir penulisan kode Bootstrap -->
+            <script>
+                /* Tulis Javascript Di bawah Sini */
 
-                <div class="col-12 col-md-4 mt-4 mt-md-0 text-center text-md-right">
-                    &copy; 2023 Kopi Kuy &amp; Tim . All Rights Reserved
-                </div>
-            </div>
-        </div>
-    </footer>
+                var sumber1 = "https://rikikurnia.com/prakerja/api/kopi#"
+                var sumber2 = "data.json"
 
-    <!-- Batas Akhir penulisan kode Bootstrap -->
-    <script>
-        /* Tulis Javascript Di bawah Sini */
+                select_kopi.onchange = function () {
+                    var dipilih = select_kopi.value
+                    console.log(dipilih)
+                    $.getJSON(sumber2).then(function (data) {
+                        var data_kopi = data[dipilih]
+                        console.log(data_kopi)
 
-        var sumber1 = "https://rikikurnia.com/prakerja/api/kopi#"
-        var sumber2 = "data.json"
-
-        select_kopi.onchange = function () {
-            var dipilih = select_kopi.value
-            console.log(dipilih)
-            $.getJSON(sumber2).then(function (data) {
-                var data_kopi = data[dipilih]
-                console.log(data_kopi)
-
-                baris_produk.innerHTML = ``
-                data_kopi.forEach(item => {
-                    baris_produk.innerHTML += `<div class="col mb-4">
+                        baris_produk.innerHTML = ``
+                        data_kopi.forEach(item => {
+                            baris_produk.innerHTML += `<div class="col mb-4">
                     <div class="card">
                         <img src="${item.foto}" class="card-img-top" alt="...">
                         <div class="card-body">
@@ -164,12 +142,12 @@
                 </div>`
 
 
-                });
-            })
-        }
+                        });
+                    })
+                }
 
-        /* Batas Akhir penulisan kode Javascript */
-    </script>
+                /* Batas Akhir penulisan kode Javascript */
+            </script>
 </body>
 
 </html>
