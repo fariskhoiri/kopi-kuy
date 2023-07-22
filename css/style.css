@@ -496,6 +496,11 @@ section.our-team>p {
    width: 100%;
 }
 
+div.team {
+   width: 25%;
+   padding: 20px;
+}
+
 div.team img {
    width: 100%;
    border-radius: 50px 0px 50px 0px;
@@ -506,7 +511,7 @@ div.team img {
 }
 
 div.team img:hover {
-   box-shadow: 5px 5px 10px #000;
+   box-shadow: 5px 5px 10px #767676;
    transition: 0.3s;
 }
 
