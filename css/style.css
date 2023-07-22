@@ -565,11 +565,8 @@ footer div.navigasi a {
 
 }
 
-img:hover {
-   background-size: cover;
-   border-radius: 5px;
-   transition: 0.3s;
-   box-shadow: 5px 5px 10px;
+#type {
+   font-size: 7.6vw;
 }
 
 /* Kode CSS Selesai di sini */

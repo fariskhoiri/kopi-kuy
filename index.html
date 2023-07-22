@@ -27,7 +27,7 @@
 
     <header>
         <div class="kiri">
-            <h1>
+            <h1 id="type">
                 Kopi Kuy <img src="images/icon/icon_kopi.svg">
             </h1>
 
@@ -178,6 +178,23 @@
         </div>
         <p>Copyright kopi kuy: © 2023 Kopi Kuy. All Rights Reserved</p>
     </footer>
+
+    <script>
+        var string = "Kopi Kuy"; /* type your text here */
+        var array = string.split("");
+        var timer;
+
+        function frameLooper() {
+            if (array.length > 0) {
+                document.getElementById("type").innerHTML += array.shift();
+            } else {
+                clearTimeout(timer);
+            }
+            loopTimer = setTimeout('frameLooper()', 70); /* change 70 for speed */
+
+        }
+        frameLooper();
+    </script>
 
 
     <!--
