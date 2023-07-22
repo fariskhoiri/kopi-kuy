@@ -565,4 +565,10 @@ footer div.navigasi a {
 
 }
 
+.box_shadow:hover {
+   background-size: cover;
+   transition: 0.3s;
+   box-shadow: 5px 5px 10px;
+}
+
 /* Kode CSS Selesai di sini */
