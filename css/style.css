@@ -116,6 +116,92 @@ h3 {
    font-weight: bold;
 }
 
+.text-animation h1 {
+   font-size: 2.45rem;
+   margin-top: 5.5px;
+}
+
+.text-animation {
+   font-size: 2.26rem;
+   text-transform: uppercase;
+   height: 50vh;
+   display: flex;
+   align-items: center;
+   justify-content: flex-start;
+   margin-bottom: -7rem;
+}
+
+.animation {
+   height: 65px;
+   overflow: hidden;
+   margin-left: 1rem;
+}
+
+.animation>div>div {
+   padding: 0.10rem 0.70rem;
+   height: 2.81rem;
+   margin-bottom: 2.81rem;
+   display: inline-block;
+}
+
+.animation div:first-child {
+   animation: text-animation 8s infinite;
+}
+
+.first div {
+   background-color: none;
+}
+
+.second div {
+   background-color: none;
+}
+
+.third div {
+   background-color: none;
+}
+
+@keyframes text-animation {
+   0% {
+      margin-top: 0;
+   }
+
+   10% {
+      margin-top: 0;
+   }
+
+   20% {
+      margin-top: -5.62rem;
+   }
+
+   30% {
+      margin-top: -5.62rem;
+   }
+
+   40% {
+      margin-top: -11.24rem;
+   }
+
+   60% {
+      margin-top: -11.24rem;
+   }
+
+   70% {
+      margin-top: -5.62rem;
+   }
+
+   80% {
+      margin-top: -5.62rem;
+   }
+
+   90% {
+      margin-top: 0;
+   }
+
+   100% {
+      margin-top: 0;
+   }
+}
+
 img {
    /* 
       kode max-width artinya lebar maksimal
@@ -226,7 +312,7 @@ header div.kiri,
 header div.kanan {
    /* width mengatur lebar elemen. 50% artinya setengah ukuran elemen pembungkus */
    width: 50%;
-   padding: 50px;
+   padding: 27px;
 }
 
 header h1 {
@@ -410,18 +496,18 @@ section.our-team>p {
    width: 100%;
 }
 
-div.team {
-   width: 25%;
-   padding: 20px;
-}
-
 div.team img {
    width: 100%;
+   border-radius: 50px 0px 50px 0px;
    aspect-ratio: 1/1;
    object-fit: cover;
-   box-shadow: 0 3px 10px -2px #000;
-   border-radius: 50px 0px 50px 0px;
    margin-bottom: 10px;
+   background-size: cover;
+}
+
+div.team img:hover {
+   box-shadow: 5px 5px 10px #000;
+   transition: 0.3s;
 }
 
 
