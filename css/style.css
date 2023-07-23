@@ -654,7 +654,7 @@ footer div.navigasi a {
    }
 
    main.text-animation {
-      display: none;
+      width: 100%;
    }
 
    a.shop {
