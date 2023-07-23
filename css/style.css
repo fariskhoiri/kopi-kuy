@@ -261,9 +261,14 @@ div.navigasi {
 }
 
 nav a {
-   color: #fff;
+   color: #e0e0e0;
+   transition: background-color 0.3s, color 0.3s;
    padding-left: 8px;
    padding-right: 8px;
+}
+
+nav a:hover {
+   color: #fff;
 }
 
 a.shop {
@@ -645,6 +650,10 @@ footer div.navigasi a {
    }
 
    div.navigasi {
+      display: none;
+   }
+
+   main.text-animation {
       display: none;
    }
 
