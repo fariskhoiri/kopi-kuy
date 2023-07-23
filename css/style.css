@@ -332,6 +332,16 @@ div.olshop img {
    margin-right: 10px;
 }
 
+.h-img {
+   border-radius: 20px;
+   background-size: cover;
+   transition: 0.1s;
+}
+
+.h-img:hover {
+   box-shadow: 1px 1px 5px;
+}
+
 /* Best Seller */
 
 section.best-seller {
